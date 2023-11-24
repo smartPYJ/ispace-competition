@@ -1,0 +1,27 @@
+{
+  "name": "ispace",
+  "version": "1.0.0",
+  "description": "ispace competition site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ispace-coding"
+  },
+  "keywords": [
+    "ispace"
+  ],
+  "author": "smart monday",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1"
+  }
+}
