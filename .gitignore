@@ -1,0 +1,16 @@
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+
+# Ignore dependencies folder
+/node_modules
+
+# Ignore log files
+*.log
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore temporary files
+.tmp/
