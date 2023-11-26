@@ -6,7 +6,9 @@ const port = process.env.PORT;
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
 
-const DB = require("./config/database");
+const dataB = require("./config/database");
+
+
 
 const oneDay = 1000 * 60 * 60 * 24;
 
@@ -30,7 +32,7 @@ app.use(
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
-DB.connect((error) => {
+dataB.connect((error) => {
   if (error) {
     console.log(error);
   } else {
@@ -46,9 +48,9 @@ app.use(express.json());
 app.post("/auth/register", (req, res) => {
   const { fName_reg, lName_reg, mName_reg, email_reg, grade_reg, password_reg, cPassword_reg, gender_reg } = req.body;
 
-  DB.query(
+  dataB.query(
     "SELECT email FROM users WHERE email = ?",
-    [email],
+    [email_reg],
     async (error, result) => {
       if (error) {
         console.log(error);
@@ -58,7 +60,7 @@ app.post("/auth/register", (req, res) => {
         return res.render("register", {
           message: "This email is already in use",
         });
-      } else if (password !== password_confirm) {
+      } else if (password_reg !== cPassword_reg) {
         return res.render("register", {
           message: "Password Didn't Match!",
         });
@@ -67,7 +69,7 @@ app.post("/auth/register", (req, res) => {
       let hashedPassword = await bcrypt.hash(password, 8);
 
       console.log(hashedPassword);
-      DB.query(
+      dataB.query(
         "INSERT INTO users SET?",
         {
           first_name: fName_reg,
