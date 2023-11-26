@@ -9,8 +9,12 @@
 # Ignore log files
 *.log
 
+
 # Ignore macOS system files
 .DS_Store
 
 # Ignore temporary files
 .tmp/
+
+# dotenv environment variable files
+.env

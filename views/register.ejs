@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Register - iSPACE Competition</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href=" img/ispce-icon.ico" rel="icon" />
+    <link href=" img/ispce-icon.ico" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href=" vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href=" vendor/aos/aos.css" rel="stylesheet" />
+    <link href=" vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href=" vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href=" vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href=" vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href=" vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href=" css/style.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid"
+                alt="Sample image"
+              />
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <!-- Pills navs -->
+              <ul
+                class="nav nav-pills nav-justified mb-3"
+                id="ex1"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link active"
+                    id="tab-login"
+                    data-mdb-toggle="pill"
+                    href="./register.html"
+                    role="tab"
+                    aria-controls="pills-login"
+                    aria-selected="true"
+                    >Register</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="tab-register"
+                    data-mdb-toggle="pill"
+                    href="./login.html"
+                    role="tab"
+                    aria-controls="pills-register"
+                    aria-selected="false"
+                    >Login</a
+                  >
+                </li>
+              </ul>
+              <!-- Pills navs -->
+
+              <!-- Pills content -->
+              <div class="tab-content">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-login"
+                  role="tabpanel"
+                  aria-labelledby="tab-login"
+                >
+                  <form action="/auth/register" method="POST">
+                    <!-- First Name input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        id="fName_reg"
+                        name="fName_reg"
+                        class="form-control"
+                        placeholder="Aladin"
+                      />
+                      <label class="form-label" for="fName_reg"
+                        >First Name</label
+                      >
+                    </div>
+
+                    <!-- Middle Name input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        id="mName_reg"
+                        name="mName_reg"
+                        class="form-control"
+                        placeholder="John"
+                      />
+                      <label class="form-label" for="mName_reg"
+                        >Middle Name</label
+                      >
+                    </div>
+
+                    <!-- Last Name input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        id="lName_reg"
+                       name="lName_reg"
+                        class="form-control"
+                        placeholder="White"
+                      />
+                      <label class="form-label" for="lName_reg"
+                        >Last Name</label
+                      >
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="email"
+                        id="email_reg"
+                        name="email_reg"
+                        class="form-control"
+                        placeholder="MJ@example.com"
+                      />
+                      <label class="form-label" for="email_reg"
+                        >Email or username</label
+                      >
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="password"
+                        id="password_reg"
+                        name="password_reg"
+                        class="form-control"
+                        placeholder="123@34%r"
+                      />
+                      <label class="form-label" for="password_reg"
+                        >Password</label
+                      >
+                    </div>
+
+                    <!-- Retype Password input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="password"
+                        id="cPassword_reg"
+                        name="cPassword_reg"
+                        class="form-control"
+                        placeholder="123@34%r"
+                      />
+                      <label class="form-label" for="cPassword_reg"
+                        >Confirm Password</label
+                      >
+                    </div>
+
+                    <!-- upload input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="upload image"
+                        >Upload Image</label
+                      >
+                      <input type="file" name=" photo_reg" id="photo_reg" class="form-control" />
+                    </div>
+
+                    <!-- Gender input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label gender" for="Gender"
+                        >Gender</label
+                      >
+                      <div class="gender-cot">
+                        <input
+                          type="radio"
+                          id="mGender_reg"
+                          value="male"
+                          name="gender_reg"
+                        
+                        />
+                        <label class="form-check-label" for="Gender"
+                          >Male</label
+                        >
+                        <input
+                          type="radio"
+                          id="fGender_reg"
+                          value="female"
+                          name="gender_reg"
+                          
+                        />
+                        <label class="form-check-label" for="Gender"
+                          >Female</label
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Grade Select input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="Grade">Grade</label>
+                      <select name="Gender" id="loginName" class="form-control">
+                        <option value="">Choose Grade</option>
+                        <option value="Primary">
+                          Primary/Upper Elementary
+                        </option>
+                        <option value="Secondary">
+                          Secondary/Middle SchoolP
+                        </option>
+                        <option value="High School">High School</option>
+                      </select>
+                    </div>
+
+                    <!-- 2 column grid layout -->
+                    <div class="row mb-4">
+                      <div class="col-md-6 d-flex justify-content-center"></div>
+
+                      <div class="col-md-6 d-flex justify-content-center">
+                        <!-- Simple link -->
+                        <!-- <a href="#!">Forgot password?</a> -->
+                      </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block mb-4"
+                    >
+                      Sign up
+                    </button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                      <p>Already a member? <a href="/login">Sign in</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
